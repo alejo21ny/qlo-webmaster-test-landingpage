@@ -59,31 +59,155 @@
 
 <body class="font-inter bg-light text-dark">
 
-    <!-- ============================================
-         HEADER PLACEHOLDER
-         Notes: Added structure only. Content comes in later phases.
-         ============================================ -->
-    <header class="w-full py-4">
-        <div class="max-w-7xl mx-auto px-4">
-            <!-- Placeholder for navigation -->
+    <!-- ==========================================================
+         HEADER
+         Author: David Gomez
+         Description: Minimal navigation for brand identity and CTA.
+         ========================================================== -->
+    <header class="w-full py-5 bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <!-- Logo Placeholder -->
+                <div class="w-10 h-10 bg-gray-300 rounded-full"></div>
+                <span class="text-xl font-semibold text-primary">Immigration Help</span>
+            </div>
+
+            <a href="#" class="hidden sm:block bg-primary text-white px-5 py-2 rounded-lg font-medium hover:bg-secondary transition">
+                Get Help Now
+            </a>
         </div>
     </header>
 
-    <!-- ============================================
-         HERO SECTION PLACEHOLDER
-         ============================================ -->
-    <main>
-        <section class="min-h-[60vh] flex items-center justify-center">
-            <h1 class="text-4xl font-bold text-primary">Landing Page Base Ready</h1>
-        </section>
-    </main>
+    <!-- ==========================================================
+         HERO SECTION
+         Author: David Gomez
+         Description: Main conversion area, strong headline + CTA.
+         ========================================================== -->
+    <section class="w-full py-20">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-10 place-items-center">
 
-    <!-- ============================================
-         FOOTER PLACEHOLDER
-         ============================================ -->
-    <footer class="py-6 mt-10">
-        <div class="max-w-7xl mx-auto px-4 text-center text-sm text-gray-500">
-            © 2025 QLO Landing Page – Built by David Gomez
+            <!-- Text Content -->
+            <div>
+                <h1 class="text-4xl md:text-5xl font-bold text-dark leading-tight mb-6">
+                    Emergency Immigration Assistance & Deportation Defense
+                </h1>
+
+                <p class="text-lg text-gray-600 mb-8">
+                    Get immediate legal support from experienced immigration professionals. Available 24/7 to help protect your rights.
+                </p>
+
+                <div class="space-x-3">
+                    <a href="#" class="bg-primary text-white px-6 py-3 rounded-lg font-medium hover:bg-secondary transition">
+                        Request Help Now
+                    </a>
+
+                    <a href="#" class="text-primary font-semibold underline hover:text-secondary">
+                        Call Us 24/7
+                    </a>
+                </div>
+            </div>
+
+            <!-- Image Placeholder -->
+            <div class="w-full h-72 md:h-96 bg-gray-300 rounded-xl"></div>
+
+        </div>
+    </section>
+
+    <!-- ==========================================================
+         BENEFITS SECTION
+         Author: David Gomez
+         Description: Key value propositions to inspire trust quickly.
+         ========================================================== -->
+    <section class="w-full py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 text-center mb-12">
+            <h2 class="text-3xl font-bold text-dark">Why Choose Our Immigration Experts?</h2>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Card 1 -->
+            <div class="p-6 bg-light rounded-xl shadow">
+                <h3 class="text-xl font-semibold text-primary mb-2">Immediate Response</h3>
+                <p class="text-gray-600 text-sm">Fast legal action to protect your rights when every minute matters.</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="p-6 bg-light rounded-xl shadow">
+                <h3 class="text-xl font-semibold text-primary mb-2">Deportation Defense</h3>
+                <p class="text-gray-600 text-sm">Experienced legal guidance to fight removal orders effectively.</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="p-6 bg-light rounded-xl shadow">
+                <h3 class="text-xl font-semibold text-primary mb-2">Document Review</h3>
+                <p class="text-gray-600 text-sm">We verify your immigration documents to ensure accuracy and compliance.</p>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="p-6 bg-light rounded-xl shadow">
+                <h3 class="text-xl font-semibold text-primary mb-2">Available 24/7</h3>
+                <p class="text-gray-600 text-sm">Round-the-clock availability for urgent immigration matters.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================
+         SOCIAL PROOF SECTION
+         Author: David Gomez
+         Description: Trust elements, testimonials, media badges.
+         ========================================================== -->
+    <section class="w-full py-16 bg-light">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-dark mb-6">Trusted by Thousands of Immigrants</h2>
+
+            <p class="text-gray-600 max-w-2xl mx-auto mb-10">
+                We have helped families across the U.S. navigate complex immigration cases with compassion and professionalism.
+            </p>
+
+            <!-- Placeholder testimonial -->
+            <div class="mx-auto max-w-xl bg-white p-6 rounded-xl shadow">
+                <p class="text-gray-700">“They supported me through my deportation case with honesty and dedication. Forever grateful.”</p>
+                <span class="block mt-4 font-semibold text-primary">— Testimonial Placeholder</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================
+         FAQ SECTION
+         Author: David Gomez
+         Description: Frequently asked questions (static version).
+         ========================================================== -->
+    <section class="w-full py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-dark text-center mb-12">Frequently Asked Questions</h2>
+
+            <div class="space-y-6 max-w-3xl mx-auto">
+                <div class="p-6 rounded-xl bg-light shadow">
+                    <h3 class="font-semibold text-primary mb-2">What should I do if I am facing deportation?</h3>
+                    <p class="text-gray-600 text-sm">Seek immediate legal advice. Acting fast can significantly affect your case.</p>
+                </div>
+
+                <div class="p-6 rounded-xl bg-light shadow">
+                    <h3 class="font-semibold text-primary mb-2">Do you offer emergency consultations?</h3>
+                    <p class="text-gray-600 text-sm">Yes, our team is available 24/7 to assist with urgent immigration matters.</p>
+                </div>
+
+                <div class="p-6 rounded-xl bg-light shadow">
+                    <h3 class="font-semibold text-primary mb-2">Can you help with asylum cases?</h3>
+                    <p class="text-gray-600 text-sm">We provide full support for asylum seekers including documentation and representation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================
+         FOOTER
+         Author: David Gomez
+         Description: Minimal footer with contact info.
+         ========================================================== -->
+    <footer class="py-8 bg-dark text-white">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-sm mb-2">© 2025 Immigration Landing Page — Built by David Gomez</p>
+            <p class="text-sm">For assistance, contact us at: support@example.com</p>
         </div>
     </footer>
 
