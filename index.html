@@ -62,6 +62,21 @@
     };
 </script>
 
+<!-- -----------------------------
+         MOCK ANALYTICS (REQUIRED)
+         ----------------------------- -->
+    <!-- Mock Google Analytics 4 Tag -->
+    <script>
+        // GA4 Placeholder
+        console.log("GA4 mock loaded");
+    </script>
+
+    <!-- Mock Meta Pixel -->
+    <script>
+        // Meta Pixel Placeholder
+        console.log("Meta Pixel mock loaded");
+    </script>
+
     <!-- Custom Styles -->
     <link rel="stylesheet" href="assets/css/style.css" />
 
@@ -264,6 +279,101 @@
     </div>
 </section>
 
+<!-- ==========================================================
+     CONTACT FORM SECTION
+     Author: David Gomez
+     Description: Lead capture form with validation + analytics mock.
+     ========================================================== -->
+<section id="contact-form" class="w-full py-20 bg-light">
+    <div class="max-w-4xl mx-auto px-4">
+
+        <!-- Section Title -->
+        <h2 class="text-3xl md:text-4xl font-extrabold text-dark text-center mb-10">
+            Request Immediate Immigration Assistance
+        </h2>
+
+        <div class="bg-white rounded-xl shadow-lg p-10 border border-gray-200">
+
+            <!-- Form -->
+            <form id="leadForm" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <!-- Name -->
+                <div class="flex flex-col">
+                    <label class="text-sm font-semibold text-dark mb-2">Full Name*</label>
+                    <input
+                        type="text"
+                        id="name"
+                        class="px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary outline-none"
+                        placeholder="Your full name"
+                        required
+                    >
+                </div>
+
+                <!-- Phone -->
+                <div class="flex flex-col">
+                    <label class="text-sm font-semibold text-dark mb-2">Phone*</label>
+                    <input
+                        type="tel"
+                        id="phone"
+                        class="px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary outline-none"
+                        placeholder="+1 (509) ..."
+                        required
+                    >
+                </div>
+
+                <!-- Email -->
+                <div class="flex flex-col">
+                    <label class="text-sm font-semibold text-dark mb-2">Email*</label>
+                    <input
+                        type="email"
+                        id="email"
+                        class="px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary outline-none"
+                        placeholder="you@example.com"
+                        required
+                    >
+                </div>
+
+                <!-- Country/City -->
+                <div class="flex flex-col">
+                    <label class="text-sm font-semibold text-dark mb-2">Country / City*</label>
+                    <input
+                        type="text"
+                        id="location"
+                        class="px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary outline-none"
+                        placeholder="Where are you contacting us from?"
+                        required
+                    >
+                </div>
+
+                <!-- Message -->
+                <div class="flex flex-col md:col-span-2">
+                    <label class="text-sm font-semibold text-dark mb-2">Message</label>
+                    <textarea
+                        id="message"
+                        rows="4"
+                        class="px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary outline-none"
+                        placeholder="Describe your immigration concern (optional)..."></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="md:col-span-2">
+                    <button
+                        type="submit"
+                        onclick="logCTA()"
+                        class="w-full bg-primary text-white text-lg font-semibold py-4 rounded-lg hover:bg-secondary transition-all duration-300 shadow-md">
+                        Send Request
+                    </button>
+                </div>
+
+            </form>
+
+            <!-- Success / Error Messages -->
+            <p id="formMessage" class="mt-6 text-center font-semibold hidden"></p>
+
+        </div>
+    </div>
+</section>
+
     <!-- ==========================================================
          FAQ SECTION
          Author: David Gomez
@@ -303,6 +413,11 @@
             <p class="text-sm">For assistance, contact us at: support@example.com</p>
         </div>
     </footer>
+
+    <!-- ============================
+        FORM.JS (Validation + CTA)
+        ============================ -->
+    <script src="assets/js/form.js"></script>
 
 </body>
 </html>
