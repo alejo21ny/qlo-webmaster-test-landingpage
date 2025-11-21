@@ -2,86 +2,136 @@
 <html lang="en">
 <head>
     <!-- ============================================
-         Project: QLO Landing Page
+         QLO Landing Page
          Author: David Gomez
-         File: index.html
-         Description: Base HTML structure for the landing page.
-         Notes: TailwindCSS via CDN, optimized for performance.
+         Description: Fully optimized <head> section with SEO, OG tags,
+                      Twitter cards, canonical URL, analytics mock,
+                      Tailwind config, and structured data.
          ============================================ -->
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Primary Meta Tags -->
-    <title>Emergency Immigration Assistance – Deportation Defense & Legal Guidance</title>
-    <meta name="description" content="Get immediate immigration legal help. Deportation defense, emergency guidance, and trusted legal support for immigrants. Available 24/7." />
+    <!-- ============================================
+         PRIMARY SEO TAGS
+         ============================================ -->
+    <title>Emergency Immigration Assistance | 24/7 Deportation Defense</title>
 
-    <!-- Google Fonts: Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <meta name="description"
+          content="Get fast and reliable immigration legal support. 24/7 deportation defense, emergency guidance, and trusted immigration assistance for families in urgent situations." />
 
-    <!-- TailwindCSS CDN -->
+    <!-- Canonical -->
+    <link rel="canonical" href="https://alejo21ny.github.io/qlo-webmaster-test-landingpage/" />
+
+    <!-- Robots -->
+    <meta name="robots" content="index, follow">
+
+    <!-- ============================================
+         OPEN GRAPH TAGS (Facebook / LinkedIn / WhatsApp)
+         ============================================ -->
+    <meta property="og:title" content="Emergency Immigration Assistance – Available 24/7">
+    <meta property="og:description" content="Immediate legal support for deportation cases, emergencies, and urgent immigration matters.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://alejo21ny.github.io/qlo-webmaster-test-landingpage/">
+    <meta property="og:image" content="assets/img/og-image.png">
+
+    <!-- ============================================
+         TWITTER CARD TAGS
+         ============================================ -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Immigration Help – Emergency 24/7">
+    <meta name="twitter:description" content="Fast immigration legal assistance and deportation defense.">
+    <meta name="twitter:image" content="assets/img/og-image.png">
+
+    <!-- ============================================
+         PRECONNECT (PERFORMANCE)
+         ============================================ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- ============================================
+         GOOGLE FONTS
+         ============================================ -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- ============================================
+         TAILWIND CSS CDN
+         ============================================ -->
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- ============================================
+         TAILWIND CUSTOM CONFIG
+         ============================================ -->
     <script>
-    // ============================================
-    // Tailwind Configuration Override
-    // Author: David Gomez
-    // Purpose: Extend color palette, font, and custom animations.
-    // ============================================
-    tailwind.config = {
-        theme: {
-            extend: {
-                fontFamily: {
-                    inter: ['Inter', 'sans-serif'],
-                },
-                colors: {
-                    primary: '#1E40AF',
-                    secondary: '#3B82F6',
-                    accent: '#F59E0B',
-                    dark: '#111827',
-                    light: '#F3F4F6',
-                },
-                keyframes: {
-                    fadeIn: {
-                        '0%': { opacity: 0, transform: 'translateY(10px)' },
-                        '100%': { opacity: 1, transform: 'translateY(0)' },
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
                     },
-                    slideUp: {
-                        '0%': { opacity: 0, transform: 'translateY(20px)' },
-                        '100%': { opacity: 1, transform: 'translateY(0)' },
+                    colors: {
+                        primary: '#1E40AF',
+                        secondary: '#3B82F6',
+                        accent: '#F59E0B',
+                        dark: '#111827',
+                        light: '#F3F4F6',
                     },
-                },
-                animation: {
-                    fadeIn: 'fadeIn 0.8s ease-out forwards',
-                    slideUp: 'slideUp 1s ease-out forwards',
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: 0, transform: 'translateY(10px)' },
+                            '100%': { opacity: 1, transform: 'translateY(0)' },
+                        },
+                        slideUp: {
+                            '0%': { opacity: 0, transform: 'translateY(20px)' },
+                            '100%': { opacity: 1, transform: 'translateY(0)' },
+                        },
+                    },
+                    animation: {
+                        fadeIn: 'fadeIn 0.8s ease-out forwards',
+                        slideUp: 'slideUp 1s ease-out forwards',
+                    },
                 },
             },
-        },
-    };
-</script>
+        };
+    </script>
 
-<!-- -----------------------------
-         MOCK ANALYTICS (REQUIRED)
-         ----------------------------- -->
-    <!-- Mock Google Analytics 4 Tag -->
+    <!-- ============================================
+         CUSTOM CSS
+         ============================================ -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- ============================================
+         FAVICON
+         ============================================ -->
+    <link rel="icon" href="assets/img/favicon.png" />
+
+    <!-- ============================================
+         ANALYTICS MOCK (REQUIRED BY TEST)
+         ============================================ -->
     <script>
-        // GA4 Placeholder
         console.log("GA4 mock loaded");
     </script>
 
-    <!-- Mock Meta Pixel -->
     <script>
-        // Meta Pixel Placeholder
         console.log("Meta Pixel mock loaded");
     </script>
 
-    <!-- Custom Styles -->
-    <link rel="stylesheet" href="assets/css/style.css" />
-
-    <!-- Favicon Placeholder -->
-    <link rel="icon" href="assets/img/favicon.png" />
+    <!-- ============================================
+         STRUCTURED DATA (JSON-LD)
+         ============================================ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LegalService",
+        "name": "Emergency Immigration Assistance",
+        "description": "24/7 deportation defense, emergency immigration guidance, and legal support.",
+        "image": "https://alejo21ny.github.io/qlo-webmaster-test-landingpage/assets/img/og-image.png",
+        "url": "https://alejo21ny.github.io/qlo-webmaster-test-landingpage/",
+        "telephone": "+15090000000",
+        "areaServed": "United States",
+        "availableLanguage": ["English", "Spanish"]
+    }
+    </script>
 
 </head>
 
