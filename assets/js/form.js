@@ -37,3 +37,31 @@ document.addEventListener("DOMContentLoaded", () => {
 function logCTA() {
     console.log("CTA Clicked – Lead Form Submission Initiated");
 }
+
+/* ==========================================================
+   FAQ Accordion Interaction
+   Author: David Gomez
+   Description: Toggles FAQ answers open/closed.
+   ========================================================== */
+
+document.querySelectorAll('.faq-item').forEach(item => {
+    item.addEventListener('click', () => {
+        const answer = item.querySelector('.faq-answer');
+        const icon = item.querySelector('span');
+
+        const isOpen = !answer.classList.contains('hidden');
+
+        // Close all others
+        document.querySelectorAll('.faq-answer').forEach(a => a.classList.add('hidden'));
+        document.querySelectorAll('.faq-item span').forEach(i => i.textContent = '+');
+
+        // Toggle current
+        if (!isOpen) {
+            answer.classList.remove('hidden');
+            icon.textContent = '–';
+        } else {
+            answer.classList.add('hidden');
+            icon.textContent = '+';
+        }
+    });
+});
