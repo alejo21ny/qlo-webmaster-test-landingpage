@@ -24,30 +24,43 @@
     <!-- TailwindCSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Tailwind Custom Config (optional) -->
     <script>
-        // ============================================
-        // Tailwind Configuration Override
-        // Author: David Gomez
-        // Purpose: Extend the default theme for professional styling.
-        // ============================================
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        inter: ['Inter', 'sans-serif'],
+    // ============================================
+    // Tailwind Configuration Override
+    // Author: David Gomez
+    // Purpose: Extend color palette, font, and custom animations.
+    // ============================================
+    tailwind.config = {
+        theme: {
+            extend: {
+                fontFamily: {
+                    inter: ['Inter', 'sans-serif'],
+                },
+                colors: {
+                    primary: '#1E40AF',
+                    secondary: '#3B82F6',
+                    accent: '#F59E0B',
+                    dark: '#111827',
+                    light: '#F3F4F6',
+                },
+                keyframes: {
+                    fadeIn: {
+                        '0%': { opacity: 0, transform: 'translateY(10px)' },
+                        '100%': { opacity: 1, transform: 'translateY(0)' },
                     },
-                    colors: {
-                        primary: '#1E40AF',
-                        secondary: '#3B82F6',
-                        accent: '#F59E0B',
-                        dark: '#111827',
-                        light: '#F3F4F6',
+                    slideUp: {
+                        '0%': { opacity: 0, transform: 'translateY(20px)' },
+                        '100%': { opacity: 1, transform: 'translateY(0)' },
                     },
                 },
+                animation: {
+                    fadeIn: 'fadeIn 0.8s ease-out forwards',
+                    slideUp: 'slideUp 1s ease-out forwards',
+                },
             },
-        };
-    </script>
+        },
+    };
+</script>
 
     <!-- Custom Styles -->
     <link rel="stylesheet" href="assets/css/style.css" />
@@ -79,39 +92,69 @@
     </header>
 
     <!-- ==========================================================
-         HERO SECTION
-         Author: David Gomez
-         Description: Main conversion area, strong headline + CTA.
-         ========================================================== -->
-    <section class="w-full py-20">
-        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-10 place-items-center">
+     HERO SECTION – Final Design
+     Author: David Gomez
+     Description: High-conversion hero optimized for immigration services.
+     Notes: Responsive, animated, and designed with Tailwind's utility classes.
+     ========================================================== -->
+<section class="w-full py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
-            <!-- Text Content -->
-            <div>
-                <h1 class="text-4xl md:text-5xl font-bold text-dark leading-tight mb-6">
-                    Emergency Immigration Assistance & Deportation Defense
-                </h1>
+        <!-- ========================
+             LEFT SIDE – TEXT CONTENT
+             ======================== -->
+        <div class="space-y-6 animate-fadeIn">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-dark leading-tight">
+                Emergency Immigration Assistance<br />
+                <span class="text-primary">Deportation Defense & Legal Guidance</span>
+            </h1>
 
-                <p class="text-lg text-gray-600 mb-8">
-                    Get immediate legal support from experienced immigration professionals. Available 24/7 to help protect your rights.
-                </p>
+            <p class="text-lg text-gray-600 max-w-md">
+                Get immediate legal support from experienced immigration professionals.
+                Available <strong>24/7</strong> to help protect your rights and keep your family safe.
+            </p>
 
-                <div class="space-x-3">
-                    <a href="#" class="bg-primary text-white px-6 py-3 rounded-lg font-medium hover:bg-secondary transition">
-                        Request Help Now
-                    </a>
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row sm:space-x-4 space-y-3 sm:space-y-0">
+                <a href="#contact-form"
+                   class="bg-primary text-white px-8 py-3 rounded-lg font-semibold text-center shadow-lg hover:bg-secondary transition-all duration-300">
+                    Request Help Now
+                </a>
 
-                    <a href="#" class="text-primary font-semibold underline hover:text-secondary">
-                        Call Us 24/7
-                    </a>
-                </div>
+                <a href="tel:+15090000000"
+                   class="border-2 border-primary text-primary px-8 py-3 rounded-lg text-center font-semibold hover:bg-primary hover:text-white transition-all duration-300">
+                    Call Us 24/7
+                </a>
             </div>
 
-            <!-- Image Placeholder -->
-            <div class="w-full h-72 md:h-96 bg-gray-300 rounded-xl"></div>
-
+            <!-- Trust Badge -->
+            <div class="flex items-center space-x-3 mt-4">
+                <div class="w-10 h-10 bg-accent rounded-full flex items-center justify-center text-white font-bold">
+                    ★
+                </div>
+                <p class="text-gray-700 text-sm">
+                    Trusted by more than <strong>10,000+ immigrants</strong> nationwide.
+                </p>
+            </div>
         </div>
-    </section>
+
+        <!-- ========================
+             RIGHT SIDE – IMAGE
+             ======================== -->
+        <div class="relative animate-slideUp">
+            <!-- Placeholder image (to be replaced with WebP) -->
+            <img src="https://via.placeholder.com/600x500"
+                 alt="Immigration lawyer assisting client"
+                 class="rounded-xl shadow-lg w-full object-cover" />
+
+            <!-- Decorative overlay -->
+            <div class="absolute -bottom-4 -right-4 bg-accent text-white px-4 py-2 rounded-lg shadow-lg text-sm font-medium">
+                24/7 Legal Support
+            </div>
+        </div>
+
+    </div>
+</section>
 
     <!-- ==========================================================
          BENEFITS SECTION
